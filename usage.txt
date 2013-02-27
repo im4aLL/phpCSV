@@ -1,0 +1,5 @@
+$export = new H_Mysql_Export();
+$export->headerAry = array();
+$export->dataAry = array();
+$export->csv();
+$export->download();

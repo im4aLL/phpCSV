@@ -1,22 +1,3 @@
-phpCSV
-======
-
-Export MYSQL data to CSV using PHP
-
-
-<h3>Usage</h3>
-
-<pre>
-$export = new H_Mysql_Export();
-$export->headerAry = array();
-$export->dataAry = array();
-$export->csv();
-$export->download();
-</pre>
-
-<h3>Using PHP and mysql</h3>
-
-<pre>
 mysql_connect("localhost","root","");
 mysql_select_db("cdcol");
 
@@ -25,7 +6,9 @@ while($row = mysql_fetch_assoc($query)){
 	$data[] = $row;
 }
 
+echo '<pre>';
 print_r($data);
+echo '</pre>';
 
 include('classFile.php');
 
@@ -37,4 +20,3 @@ $export->directory = 'files/';					// DIRECTORY NAME
 $export->csv();							// INITIALIZATION
 $export->download();						// AUTOMATIC DOWNLOAD
 $export->delete();						// AUTOMATIC DELETE DOWNLOADED FILE
-</pre>
